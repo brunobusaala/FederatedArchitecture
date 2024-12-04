@@ -1,16 +1,14 @@
-﻿namespace Phoenix.Registry.Types
+﻿using Infrastructure;
+using Phoenix.Infrastructure.Models.RegistryModels;
+
+namespace Phoenix.Registry.Types
 {
     [QueryType]
     public static class Query
     {
-        public static Customer GetCustomers()
+        public static Customer? GetCustomers(ApplicationDbcontext db)
         {
-            return new Customer()
-            {
-                Id = Guid.NewGuid(),
-                FirstName = "Timothy",
-                LastName = "Kelvin"
-            };
+            return db.Customers.FirstOrDefault();
         }
     }
 }

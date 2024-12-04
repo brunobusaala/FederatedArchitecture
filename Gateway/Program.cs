@@ -4,7 +4,7 @@ builder.Services.AddHttpClient("Fusion");
 
 builder.Services
     .AddFusionGatewayServer()
-    .ConfigureFromFile("./.fgp");
+    .ConfigureFromFile("./Gateway.fgp");
 
 var app = builder.Build();
 
