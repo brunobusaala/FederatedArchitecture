@@ -7,34 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Microservices", "1.1 Mi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 Shared", "1.2 Shared", "{937C654A-2D55-4AE1-BD37-78019E971D2E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{CA92BD64-2037-4CBC-9C96-1DCF34D3E7B2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{5AF1792A-6D7C-446B-A07C-0424180E9542}"
-	ProjectSection(SolutionItems) = preProject
-		ICustomerRepository.cs = ICustomerRepository.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbContext", "DbContext", "{A5F900DF-F629-4093-8097-AC8000CC69AF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RegistryModels", "RegistryModels", "{9A2C78CB-1423-40B6-A596-51DCBDF71B28}"
-	ProjectSection(SolutionItems) = preProject
-		Customer.cs = Customer.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdminModels", "AdminModels", "{08270B6A-FB44-4369-9149-F8E6572E1059}"
-	ProjectSection(SolutionItems) = preProject
-		Branch.cs = Branch.cs
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0 Gateway", "1.0 Gateway", "{9EFB34A6-83DA-4313-9AEA-76D280368020}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.1 Phoenix.Registry", "Phoenix.Registry\1.1.1 Phoenix.Registry.csproj", "{65A2E7D7-FAF5-43CE-A374-C1380439A480}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.2 Phoenix.HumanResource", "Phoenix.HumanResource\1.1.2 Phoenix.HumanResource.csproj", "{1A2DBFF5-1625-450E-812F-BF9B926CBAE8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HumanResourceModels", "HumanResourceModels", "{38E6FAE0-3507-447C-AF2B-1789C6F6AC08}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoenix.Gateway", "Gateway\Phoenix.Gateway.csproj", "{9E47376D-3E98-4E8C-9219-D9DD598C3CE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{CD506AB5-040D-481F-AB7F-8B982CA7127B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,19 +35,18 @@ Global
 		{9E47376D-3E98-4E8C-9219-D9DD598C3CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E47376D-3E98-4E8C-9219-D9DD598C3CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E47376D-3E98-4E8C-9219-D9DD598C3CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD506AB5-040D-481F-AB7F-8B982CA7127B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD506AB5-040D-481F-AB7F-8B982CA7127B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD506AB5-040D-481F-AB7F-8B982CA7127B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD506AB5-040D-481F-AB7F-8B982CA7127B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{CA92BD64-2037-4CBC-9C96-1DCF34D3E7B2} = {937C654A-2D55-4AE1-BD37-78019E971D2E}
-		{5AF1792A-6D7C-446B-A07C-0424180E9542} = {937C654A-2D55-4AE1-BD37-78019E971D2E}
-		{A5F900DF-F629-4093-8097-AC8000CC69AF} = {937C654A-2D55-4AE1-BD37-78019E971D2E}
-		{9A2C78CB-1423-40B6-A596-51DCBDF71B28} = {CA92BD64-2037-4CBC-9C96-1DCF34D3E7B2}
-		{08270B6A-FB44-4369-9149-F8E6572E1059} = {CA92BD64-2037-4CBC-9C96-1DCF34D3E7B2}
 		{65A2E7D7-FAF5-43CE-A374-C1380439A480} = {694C8387-0D7D-4D3F-AE47-AC83F35414EE}
 		{1A2DBFF5-1625-450E-812F-BF9B926CBAE8} = {694C8387-0D7D-4D3F-AE47-AC83F35414EE}
-		{38E6FAE0-3507-447C-AF2B-1789C6F6AC08} = {CA92BD64-2037-4CBC-9C96-1DCF34D3E7B2}
 		{9E47376D-3E98-4E8C-9219-D9DD598C3CE3} = {9EFB34A6-83DA-4313-9AEA-76D280368020}
+		{CD506AB5-040D-481F-AB7F-8B982CA7127B} = {937C654A-2D55-4AE1-BD37-78019E971D2E}
 	EndGlobalSection
 EndGlobal
