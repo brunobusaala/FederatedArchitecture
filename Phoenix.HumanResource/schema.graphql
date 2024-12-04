@@ -12,13 +12,7 @@ type CollectionSegmentInfo {
 }
 
 type Customer {
-  firstName: String
-  lastName: String
-  email: String
-  address: String
   id: UUID!
-  createdDate: DateTime!
-  modifiedDate: DateTime!
 }
 
 type Department {
@@ -38,12 +32,11 @@ type DepartmentsCollectionSegment {
 }
 
 type Employee {
-  customerId: UUID!
-  customer: Customer
+  customer: Customer!
   departmentId: UUID!
   department: Department
   salary: Decimal!
-  id: UUID! @cost(weight: "10")
+  id: UUID!
   createdDate: DateTime!
   modifiedDate: DateTime!
 }

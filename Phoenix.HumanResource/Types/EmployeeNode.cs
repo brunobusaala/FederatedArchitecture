@@ -1,11 +1,20 @@
-
 using Phoenix.Infrastructure.Models.HumanResourceModels;
 
-public class EmployeeNode: ObjectTypeExtension<Employee>
+namespace Phoenix.HumanResource.Types
 {
-    protected override void Configure(IObjectTypeDescriptor<Employee> descriptor)
+    [ObjectType<Employee>]
+    public static partial class EmployeeType
     {
-        descriptor.Field(e => e.Id)
-            .Resolve(ctx => ctx.Parent<Employee>().Id);
+        static partial void Configure(IObjectTypeDescriptor<Employee> descriptor)
+        {
+            descriptor.Ignore(e => e.CustomerId);
+        }
+
+        public static Customer GetCustomer([Parent] Employee employee)
+        {
+            return new(employee.CustomerId);
+        }
     }
+
+    public sealed record Customer(Guid Id);
 }
