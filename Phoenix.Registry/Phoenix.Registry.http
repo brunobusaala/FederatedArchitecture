@@ -1,0 +1,6 @@
+@Phoenix.Registry_HostAddress = http://localhost:5234
+
+GET {{Phoenix.Registry_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,6 @@
+@Phoenix.HumanResource_HostAddress = http://localhost:5241
+
+GET {{Phoenix.HumanResource_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
