@@ -9,7 +9,7 @@ namespace Phoenix.Registry.Types
             descriptor.Field(c => c.Id)
                 .Resolve(ctx => ctx.Parent<Customer>().Id);
 
-            descriptor.Field("FullName")
+            descriptor.Field("fullName")
                 .Type<StringType>()
                 .Resolve(ctx => $"{ctx.Parent<Customer>().FirstName} {ctx.Parent<Customer>().LastName}");
         }

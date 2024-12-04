@@ -16,27 +16,55 @@ type Customer {
   lastName: String
   email: String
   address: String
+  id: UUID!
+  createdDate: DateTime!
+  modifiedDate: DateTime!
+}
+
+type Department {
+  name: String
   id: UUID! @cost(weight: "10")
   createdDate: DateTime!
   modifiedDate: DateTime!
-  fullName: String @cost(weight: "10")
 }
 
 "A segment of a collection."
-type CustomersCollectionSegment {
+type DepartmentsCollectionSegment {
   "Information to aid in pagination."
   pageInfo: CollectionSegmentInfo!
   "A flattened list of the items."
-  items: [Customer]
+  items: [Department]
+  totalCount: Int! @cost(weight: "10")
+}
+
+type Employee {
+  customerId: UUID!
+  customer: Customer
+  departmentId: UUID!
+  department: Department
+  salary: Decimal!
+  id: UUID! @cost(weight: "10")
+  createdDate: DateTime!
+  modifiedDate: DateTime!
+}
+
+"A segment of a collection."
+type EmployeesCollectionSegment {
+  "Information to aid in pagination."
+  pageInfo: CollectionSegmentInfo!
+  "A flattened list of the items."
+  items: [Employee]
   totalCount: Int! @cost(weight: "10")
 }
 
 type Mutation {
-  createCustomer(firstName: String! lastName: String! email: String! address: String!): Boolean! @cost(weight: "10")
+  createEmployee(customerId: UUID! departmentId: UUID! salary: Decimal!): Boolean! @cost(weight: "10")
+  createDepartment(name: String!): Boolean! @cost(weight: "10")
 }
 
 type Query {
-  customers(skip: Int take: Int): CustomersCollectionSegment @listSize(assumedSize: 50, slicingArguments: [ "take" ], sizedFields: [ "items" ], requireOneSlicingArgument: false) @cost(weight: "10")
+  employees(skip: Int take: Int): EmployeesCollectionSegment @listSize(assumedSize: 50, slicingArguments: [ "take" ], sizedFields: [ "items" ], requireOneSlicingArgument: false) @cost(weight: "10")
+  departments(skip: Int take: Int): DepartmentsCollectionSegment @listSize(assumedSize: 50, slicingArguments: [ "take" ], sizedFields: [ "items" ], requireOneSlicingArgument: false) @cost(weight: "10")
 }
 
 "The purpose of the `cost` directive is to define a `weight` for GraphQL types, fields, and arguments. Static analysis can use these weights when calculating the overall cost of a query or response."
@@ -50,5 +78,8 @@ directive @specifiedBy("The specifiedBy URL points to a human-readable specifica
 
 "The `DateTime` scalar represents an ISO-8601 compliant date time type."
 scalar DateTime @specifiedBy(url: "https:\/\/www.graphql-scalars.com\/date-time")
+
+"The `Decimal` scalar type represents a decimal floating-point number."
+scalar Decimal
 
 scalar UUID @specifiedBy(url: "https:\/\/tools.ietf.org\/html\/rfc4122")

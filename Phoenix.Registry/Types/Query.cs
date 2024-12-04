@@ -6,9 +6,10 @@ namespace Phoenix.Registry.Types
     [QueryType]
     public static class Query
     {
-        public static Customer? GetCustomers(ApplicationDbcontext db)
+        [UseOffsetPaging(IncludeTotalCount = true)]
+        public static IQueryable<Customer?> GetCustomers(ApplicationDbcontext db)
         {
-            return db.Customers.FirstOrDefault();
+            return db.Customers;
         }
     }
 }
