@@ -1,6 +1,6 @@
-﻿using Infrastructure;
-using Phoenix.HumanResource.Entities;
-using Phoenix.Infrastructure.Models.HumanResourceModels;
+﻿using Infrastracture.Entities;
+using Infrastructure;
+using Infrastructure.Models;
 using Phoenix.Infrastructure.Models.RegistryModels;
 
 namespace Phoenix.HumanResource.Types.Mutations

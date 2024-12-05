@@ -1,12 +1,12 @@
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Phoenix.HumanResource.Infrastracture;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApplicationDbcontext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
+builder.Services.AddDbContext<HumanResourceDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("HumanResourceDefaultConnection")));
 
 builder
     .AddGraphQL()

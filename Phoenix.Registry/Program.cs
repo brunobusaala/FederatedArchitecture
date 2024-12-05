@@ -1,11 +1,12 @@
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Phoenix.Registry.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApplicationDbcontext>(options =>
+builder.Services.AddDbContext<RegistryDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RegistryDefaultConnection"));
 });
 
 builder
