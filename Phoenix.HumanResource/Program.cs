@@ -9,8 +9,11 @@ builder.Services.AddDbContext<ApplicationDbcontext>(options =>
 });
 
 builder
-    .AddGraphQL();
+    .AddGraphQL()
+    .AddHumanResourceTypes();
 
 var app = builder.Build();
 
-app.Run();
+app.MapGraphQL();
+
+app.RunWithGraphQLCommands(args);
