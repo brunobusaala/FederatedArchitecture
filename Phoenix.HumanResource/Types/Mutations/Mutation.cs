@@ -1,12 +1,12 @@
-﻿using Infrastructure;
-using Phoenix.Infrastructure.Models.HumanResourceModels;
+﻿using Infrastructure.Models;
+using Phoenix.HumanResource.Infrastracture;
 
 namespace Phoenix.HumanResource.Types.Mutations
 {
     [MutationType]
     public static class Mutation
     {
-        public static bool CreateEmployee(ApplicationDbcontext db, Guid customerId, Guid departmentId, decimal salary)
+        public static bool CreateEmployee(HumanResourceDbContext db, Guid customerId, Guid departmentId, decimal salary)
         {
             var employee = new Employee
             {
@@ -20,7 +20,7 @@ namespace Phoenix.HumanResource.Types.Mutations
             return db.SaveChanges() > 0;
         }
 
-        public static bool CreateDepartment(ApplicationDbcontext db, string name)
+        public static bool CreateDepartment(HumanResourceDbContext db, string name)
         {
             var department = new Department
             {

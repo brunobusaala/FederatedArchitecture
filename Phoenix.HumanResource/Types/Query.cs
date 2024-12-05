@@ -1,5 +1,6 @@
 ﻿using Infrastructure;
-using Phoenix.Infrastructure.Models.HumanResourceModels;
+using Infrastructure.Models;
+using Phoenix.HumanResource.Infrastracture;
 
 namespace Phoenix.HumanResource.Types
 {
@@ -7,13 +8,13 @@ namespace Phoenix.HumanResource.Types
     public static class Query
     {
         [UseOffsetPaging(IncludeTotalCount = true)]
-        public static IQueryable<Employee?> GetEmployees(ApplicationDbcontext db)
+        public static IQueryable<Employee?> GetEmployees(HumanResourceDbContext db)
         {
             return db.Employees;
         }
 
         [UseOffsetPaging(IncludeTotalCount = true)]
-        public static IQueryable<Department?> GetDepartments(ApplicationDbcontext db)
+        public static IQueryable<Department?> GetDepartments(HumanResourceDbContext db)
         {
             return db.Departments;
         }

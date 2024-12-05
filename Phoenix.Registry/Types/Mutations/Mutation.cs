@@ -1,12 +1,13 @@
 ﻿using Infrastructure;
 using Phoenix.Infrastructure.Models.RegistryModels;
+using Phoenix.Registry.Infrastructure;
 
 namespace Phoenix.Registry.Types.Mutations
 {
     [MutationType]
     public static class Mutation
     {
-        public static bool CreateCustomer(ApplicationDbcontext db, string firstName, string lastName, string email, string address)
+        public static bool CreateCustomer(RegistryDbContext db, string firstName, string lastName, string email, string address)
         {
             var customer = new Customer
             {

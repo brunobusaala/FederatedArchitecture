@@ -6,19 +6,16 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Microservices", "1.1 Microservices", "{694C8387-0D7D-4D3F-AE47-AC83F35414EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 Shared", "1.2 Shared", "{937C654A-2D55-4AE1-BD37-78019E971D2E}"
-	ProjectSection(SolutionItems) = preProject
-		REFERENCES.TXT = REFERENCES.TXT
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0 Gateway", "1.0 Gateway", "{9EFB34A6-83DA-4313-9AEA-76D280368020}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.1 Phoenix.Registry", "Phoenix.Registry\1.1.1 Phoenix.Registry.csproj", "{65A2E7D7-FAF5-43CE-A374-C1380439A480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.1.1 Phoenix.Registry", "Phoenix.Registry\1.1.1 Phoenix.Registry.csproj", "{65A2E7D7-FAF5-43CE-A374-C1380439A480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.1.2 Phoenix.HumanResource", "Phoenix.HumanResource\1.1.2 Phoenix.HumanResource.csproj", "{1A2DBFF5-1625-450E-812F-BF9B926CBAE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.1.2 Phoenix.HumanResource", "Phoenix.HumanResource\1.1.2 Phoenix.HumanResource.csproj", "{1A2DBFF5-1625-450E-812F-BF9B926CBAE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoenix.Gateway", "Gateway\Phoenix.Gateway.csproj", "{9E47376D-3E98-4E8C-9219-D9DD598C3CE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phoenix.Gateway", "Gateway\Phoenix.Gateway.csproj", "{9E47376D-3E98-4E8C-9219-D9DD598C3CE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoenix.Infrastructure", "Phoenix.Infrastructure\Phoenix.Infrastructure.csproj", "{8C468527-D1E3-4A12-B6DF-E82AAAD700F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phoenix.Infrastructure", "Phoenix.Infrastructure\Phoenix.Infrastructure.csproj", "{8C468527-D1E3-4A12-B6DF-E82AAAD700F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,5 +48,8 @@ Global
 		{1A2DBFF5-1625-450E-812F-BF9B926CBAE8} = {694C8387-0D7D-4D3F-AE47-AC83F35414EE}
 		{9E47376D-3E98-4E8C-9219-D9DD598C3CE3} = {9EFB34A6-83DA-4313-9AEA-76D280368020}
 		{8C468527-D1E3-4A12-B6DF-E82AAAD700F8} = {937C654A-2D55-4AE1-BD37-78019E971D2E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2C095F7-0932-44AB-B0E9-7BC8E481917C}
 	EndGlobalSection
 EndGlobal

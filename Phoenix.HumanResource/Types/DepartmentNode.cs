@@ -1,4 +1,4 @@
-using Phoenix.Infrastructure.Models.HumanResourceModels;
+using Infrastructure.Models;
 
 public class DepartmentNode: ObjectTypeExtension<Department>
 {

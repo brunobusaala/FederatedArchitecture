@@ -1,4 +1,4 @@
-﻿namespace Phoenix.HumanResource.Entities
+﻿namespace Infrastracture.Entities
 {
     public class AddDepartmentInput
     {

@@ -1,8 +1,13 @@
-﻿namespace Phoenix.Infrastructure.Models.HumanResourceModels
+﻿using Infrastructure.Models;
+using Phoenix.Infrastructure.Models.RegistryModels;
+
+namespace Infrastracture.Entities
 {
-    public class Employee : Entity
+    public class AddEmployeeInput
     {
         public Guid CustomerId { get; set; }
+
+        public Customer? Customer { get; set; }
 
         public Guid DepartmentId { get; set; }
 

@@ -1,4 +1,4 @@
-using Phoenix.Infrastructure.Models.HumanResourceModels;
+using Infrastructure.Models;
 
 namespace Phoenix.HumanResource.Types
 {

@@ -1,12 +1,13 @@
 ﻿using Infrastructure;
-using Phoenix.Infrastructure.Models.HumanResourceModels;
+using Infrastructure.Models;
+using Phoenix.HumanResource.Infrastracture;
 
 namespace Phoenix.HumanResource.Types.Queries
 {
     [QueryType]
     public class Query
     {
-        public IQueryable<Department> GetDepartments(ApplicationDbcontext applicationDbcontext)
+        public IQueryable<Department> GetDepartments(HumanResourceDbContext applicationDbcontext)
         {
             return applicationDbcontext.Departments;
         }
