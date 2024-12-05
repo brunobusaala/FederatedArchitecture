@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 Microservices", "1.1 Microservices", "{694C8387-0D7D-4D3F-AE47-AC83F35414EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 Shared", "1.2 Shared", "{937C654A-2D55-4AE1-BD37-78019E971D2E}"
+	ProjectSection(SolutionItems) = preProject
+		REFERENCES.TXT = REFERENCES.TXT
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0 Gateway", "1.0 Gateway", "{9EFB34A6-83DA-4313-9AEA-76D280368020}"
 EndProject
