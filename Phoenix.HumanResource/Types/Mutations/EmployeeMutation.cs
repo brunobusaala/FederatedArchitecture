@@ -1,14 +1,13 @@
 ﻿using Infrastracture.Entities;
-using Infrastructure;
 using Infrastructure.Models;
-using Phoenix.Infrastructure.Models.RegistryModels;
+using Phoenix.HumanResource.Infrastracture;
 
 namespace Phoenix.HumanResource.Types.Mutations
 {
     [MutationType]
     public class EmployeeMutation
     {
-        public async Task<Employee> AddEmployee(AddEmployeeInput addEmployeeInput, ApplicationDbcontext context)
+        public async Task<Employee> AddEmployee(AddEmployeeInput addEmployeeInput, HumanResourceDbContext context)
         {
             var payload = new Employee
             {

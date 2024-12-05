@@ -1,5 +1,5 @@
 ﻿using Infrastructure.Models;
-using Phoenix.Infrastructure.Models.RegistryModels;
+using Phoenix.HumanResource.Types;
 
 namespace Infrastracture.Entities
 {
